@@ -62,10 +62,44 @@ let fuel60 = (1500 / 28);
 let fuel75 = (1500 / 23);
 let cost55 = fuel55 * 3;
 let cost60 = fuel60 * 3;
-let cost75 = fuel75 * 3
+let cost75 = fuel75 * 3;
 let budget = 175;
 
 let msg = `At 55MPH the car will use ${fuel55} gallons and it will cost ${cost55}. Length of trip ${(1500 / 55).toFixed(2)} hours, budget enough to cover ${(budget - cost55) > 0}
 At 60MPH the car will use ${(fuel60.toFixed(2))} gallons and it will cost ${cost60.toFixed(2)}. Length of trip ${(1500 / 60).toFixed(2)} hours, budget enough to cover ${(budget - cost60) > 0}
 At 75MPH the car will use ${fuel75.toFixed(2)} gallons and it will cost ${cost75.toFixed(2)}. Length of trip ${(1500 / 75).toFixed(2)} hours, budget enough to cover ${(budget - cost75) > 0}`
-console.log(msg)
+
+function travel(){
+    let speed = 55;
+    let MPG = 30;
+    let budget = 175;
+
+    let count = 1;
+
+    let msg;
+
+    switch (count){
+        case 1:
+            msg = `At ${speed}MPH the car will use ${1500 / MPG} gallons and it will cost ${((1500 / MPG) * 3).toFixed(2)}. Length of trip ${(1500 / speed).toFixed(2)} hours, budget enough to cover ${(budget - (1500 / MPG) * 3) > 0}`;
+            MPG = 28;
+            speed = 60;
+            count ++;
+            console.log(msg) 
+        case 2:
+            msg = `At ${speed}MPH the car will use ${1500 / MPG} gallons and it will cost ${((1500 / MPG) * 3).toFixed(2)}. Length of trip ${(1500 / speed).toFixed(2)} hours, budget enough to cover ${(budget - (1500 / MPG) * 3) > 0}`;
+            MPG = 23;
+            speed = 75;
+            count ++;
+            console.log(msg);
+        case 3:
+            msg = `At ${speed}MPH the car will use ${1500 / MPG} gallons and it will cost ${((1500 / MPG) * 3).toFixed(2)}. Length of trip ${(1500 / speed).toFixed(2)} hours, budget enough to cover ${(budget - (1500 / MPG) * 3) > 0}`;
+            console.log(msg);
+
+        default:
+            break;
+
+
+    }
+}
+
+console.log(travel())
