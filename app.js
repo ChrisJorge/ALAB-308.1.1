@@ -101,5 +101,3 @@ function travel(){
 
     }
 }
-
-console.log(travel())
