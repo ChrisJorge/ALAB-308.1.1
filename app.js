@@ -55,4 +55,17 @@ let firstLarger = (n1 > n4);
 
 let arithmeticOperation = ((n2 - n1) * n3) % n4;
 
-const isOver25V2 = n1 > 25 && n2 > 25 && n3 > 25 && n4 > 25;
+const isUnder25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25;
+
+let fuel55 = (1500 / 30);
+let fuel60 = (1500 / 28);
+let fuel75 = (1500 / 23);
+let cost55 = fuel55 * 3;
+let cost60 = fuel60 * 3;
+let cost75 = fuel75 * 3
+let budget = 175;
+
+let msg = `At 55MPH the car will use ${fuel55} gallons and it will cost ${cost55}. Length of trip ${(1500 / 55).toFixed(2)} hours, budget enough to cover ${(budget - cost55) > 0}
+At 60MPH the car will use ${(fuel60.toFixed(2))} gallons and it will cost ${cost60.toFixed(2)}. Length of trip ${(1500 / 60).toFixed(2)} hours, budget enough to cover ${(budget - cost60) > 0}
+At 75MPH the car will use ${fuel75.toFixed(2)} gallons and it will cost ${cost75.toFixed(2)}. Length of trip ${(1500 / 75).toFixed(2)} hours, budget enough to cover ${(budget - cost75) > 0}`
+console.log(msg)
