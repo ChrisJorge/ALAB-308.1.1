@@ -54,3 +54,5 @@ let divisible_5 = ((n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5)) === 0;
 let firstLarger = (n1 > n4);
 
 let arithmeticOperation = ((n2 - n1) * n3) % n4;
+
+const isOver25V2 = n1 > 25 && n2 > 25 && n3 > 25 && n4 > 25;
